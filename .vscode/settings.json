@@ -66,5 +66,5 @@
     "explorer.fileNesting.patterns": {
         "*.sln": "*.csproj"
     },
-    "dotnet.defaultSolution": "Flappy Bird Alg 2 ver 0.3.sln"
+    "dotnet.defaultSolution": "Flappy-Bird-Unity.sln"
 }
