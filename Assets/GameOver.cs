@@ -16,23 +16,33 @@ public class GameOver : MonoBehaviour
         Time.timeScale = 1;
     }
 
-    public void GameOverActive()
+   public void GameOverActive()
+{
+    if (gameOverPanelObject != null && !gameOverPanelObject.activeSelf)
     {
+        gameOverPanelObject.SetActive(true);
+        SoundManager.instance.PlayMorte();
 
-        if (gameOverPanelObject != null && !gameOverPanelObject.activeSelf)
-        {
-            gameOverPanelObject.SetActive(true);
-            SoundManager.instance.PlayMorte();
-        }
         
-        if (gameOverAnimator != null)
+        int currentScore = Mathf.FloorToInt(Points.scoreValue);
+        int bestScore = PlayerPrefs.GetInt("BestScore", 0);
+
+        if (currentScore > bestScore)
         {
-            gameOverAnimator.SetTrigger("ShowGameOver");
+            PlayerPrefs.SetInt("BestScore", currentScore);
+            PlayerPrefs.Save();
         }
 
-        Time.timeScale = 0;
-        
+        Debug.Log($"[GAME OVER] Score atual: {currentScore} | Best: {PlayerPrefs.GetInt("BestScore")}");
     }
+
+    if (gameOverAnimator != null)
+    {
+        gameOverAnimator.SetTrigger("ShowGameOver");
+    }
+
+    Time.timeScale = 0;
+}
 
     public void RestartGame()
     {

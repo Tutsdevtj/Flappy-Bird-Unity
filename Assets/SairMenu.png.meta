@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SairMenu_0: 5130843918050621596
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
