@@ -35,9 +35,16 @@ public class GameOver : MonoBehaviour
 
     public void RestartGame()
     {
-      
-        Time.timeScale = 1f; 
+
+        Time.timeScale = 1f;
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+    
+    public void VoltaMenu()
+    {
+        Time.timeScale = 1f;
+
+        SceneManager.LoadScene("mainMenu");
     }
 }

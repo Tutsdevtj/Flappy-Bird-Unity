@@ -21,16 +21,16 @@ public class PlayerFlappyBird : MonoBehaviour
     public GameOver game; 
 
     [Header("Referências de UI (Menu)")]
-    // Arraste a imagem "Get Ready" ou o painel do menu aqui
+   
     public GameObject getReadyUI; 
     
-    // Arraste uma imagem UI branca (que cobre a tela) aqui
+    
     public UnityEngine.UI.Image screenFlashImage; 
     
-    // Variáveis de Estado
+
     private Rigidbody2D _rb2D;
     private GameHandler _gameHandler; 
-    private bool isGameStarted = false; // Controla se o jogo começou
+    private bool isGameStarted = false; 
 
     void Start()
     {

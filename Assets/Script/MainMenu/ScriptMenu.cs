@@ -7,6 +7,8 @@ using UnityEditor;
 
 public class MainMenu : MonoBehaviour
 {
+
+
     public void startGame()
     {
         SceneManager.LoadScene("flappy b");
