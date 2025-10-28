@@ -22,6 +22,7 @@ public class GameOver : MonoBehaviour
         if (gameOverPanelObject != null && !gameOverPanelObject.activeSelf)
         {
             gameOverPanelObject.SetActive(true);
+            SoundManager.instance.PlayMorte();
         }
         
         if (gameOverAnimator != null)

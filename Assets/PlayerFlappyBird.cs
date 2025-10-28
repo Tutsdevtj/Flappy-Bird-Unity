@@ -85,6 +85,8 @@ public class PlayerFlappyBird : MonoBehaviour
 
     private void Pular()
     {
+        SoundManager.instance.PlayWing();
+        
         _rb2D.linearVelocity = new Vector2(_rb2D.linearVelocity.x, velocidadePulo);
         transform.rotation = Quaternion.Euler(0, 0, upRotation);
     }
