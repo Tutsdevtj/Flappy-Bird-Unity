@@ -953,8 +953,9 @@ GameObject:
   m_Component:
   - component: {fileID: 218727099}
   - component: {fileID: 218727098}
+  - component: {fileID: 218727100}
   m_Layer: 0
-  m_Name: 360_F_364302962_Qa59yiBXH157TruF60fnSIs5zVxqrFH8_0
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1030,6 +1031,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &218727100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218727097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 557edc1a06b32b141bb6dbdfc3292a37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentCoins: 0
 --- !u!1 &235295222
 GameObject:
   m_ObjectHideFlags: 0
@@ -1551,7 +1565,7 @@ GameObject:
   - component: {fileID: 514600182}
   - component: {fileID: 514600181}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: 100 - coins
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2354,7 +2368,7 @@ GameObject:
   - component: {fileID: 1027491442}
   - component: {fileID: 1027491441}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: The Poffo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4394,6 +4408,7 @@ GameObject:
   - component: {fileID: 1591476620}
   - component: {fileID: 1591476622}
   - component: {fileID: 1591476621}
+  - component: {fileID: 1591476623}
   m_Layer: 5
   m_Name: painelMadeiraMenu
   m_TagString: Untagged
@@ -4464,6 +4479,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1591476619}
   m_CullTransparentMesh: 1
+--- !u!114 &1591476623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1591476619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b25a0c669e67eed4587a46cb8b0703dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1598319671
 GameObject:
   m_ObjectHideFlags: 0
@@ -5088,6 +5115,7 @@ GameObject:
   - component: {fileID: 1899110552}
   - component: {fileID: 1899110554}
   - component: {fileID: 1899110553}
+  - component: {fileID: 1899110555}
   m_Layer: 5
   m_Name: panelBirdThePoffo
   m_TagString: Untagged
@@ -5155,6 +5183,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1899110551}
   m_CullTransparentMesh: 1
+--- !u!114 &1899110555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1899110551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be8fc14fe92cb154b8c755294d9b3f02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemID: thePoffo
+  price: 100
+  birdSprite: {fileID: -3272592022953232413, guid: 0e1a57b711cd06d469ba3a27aa809666, type: 3}
+  buttonText: {fileID: 514600181}
+  button: {fileID: 1128021431}
 --- !u!1 &1904845122
 GameObject:
   m_ObjectHideFlags: 0
@@ -5704,6 +5749,7 @@ RectTransform:
   - {fileID: 157299301}
   - {fileID: 1528239412}
   - {fileID: 475306685}
+  - {fileID: 1523023835}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

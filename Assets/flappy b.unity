@@ -997,6 +997,7 @@ GameObject:
   - component: {fileID: 901047680}
   - component: {fileID: 901047682}
   - component: {fileID: 901047683}
+  - component: {fileID: 901047684}
   m_Layer: 0
   m_Name: Bird
   m_TagString: Untagged
@@ -1213,6 +1214,20 @@ PolygonCollider2D:
       - {x: 0.2823696, y: 0.12519716}
       - {x: 0.22129005, y: 0.18851976}
   m_UseDelaunayMesh: 0
+--- !u!114 &901047684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901047676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecbb409378c5fdd44af5856ffc7323c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultSprite: {fileID: 270593394, guid: 45c81679f2a6bab44a3e556466757db0, type: 3}
+  otherSprites: []
 --- !u!1 &1126708368
 GameObject:
   m_ObjectHideFlags: 0
