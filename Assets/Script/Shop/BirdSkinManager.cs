@@ -5,8 +5,13 @@ public class BirdSkinManager : MonoBehaviour
     public static BirdSkinManager Instance;
     private SpriteRenderer sr;
 
-    [Header("Sprite padrão (Classic)")]
-    public Sprite defaultSprite;
+    [Header("Sprites das Skins")]
+    public Sprite classicSprite;
+    public Sprite yellowClassicSprite;
+    public Sprite luizinhoSprite;
+    public Sprite tutuCalvoSprite;
+    public Sprite kaueIndianoSprite;
+    public Sprite thePoffoSprite;
 
     void Awake()
     {
@@ -19,22 +24,46 @@ public class BirdSkinManager : MonoBehaviour
         Instance = this;
         sr = GetComponent<SpriteRenderer>();
 
-        // Carregar a skin salva quando a cena começa
+        // Carrega a skin salva ao iniciar o jogo
         string equippedID = PlayerPrefs.GetString("EquippedItem", "Classic");
         ApplySkin(equippedID);
     }
 
     public void ApplySkin(string itemID)
     {
-        if (itemID == "Classic")
+        switch (itemID)
         {
-            sr.sprite = defaultSprite;
+            case "Classic":
+                sr.sprite = classicSprite;
+                break;
+            case "YellowClassic":
+                sr.sprite = yellowClassicSprite;
+                break;
+            case "Luizinho":
+                sr.sprite = luizinhoSprite;
+                break;
+            case "TutuCalvo":
+                sr.sprite = tutuCalvoSprite;
+                break;
+            case "KaueIndiano":
+                sr.sprite = kaueIndianoSprite;
+                break;
+            case "ThePoffo":
+                sr.sprite = thePoffoSprite;
+                break;
+            default:
+                sr.sprite = classicSprite;
+                break;
         }
-        else
+
+        Debug.Log($"Skin carregada: {itemID}");
+    }
+
+    void OnDestroy()
+    {
+        if (Instance == this)
         {
-            Sprite loadedSprite = Resources.Load<Sprite>("Birds/" + itemID);
-            if (loadedSprite != null)
-                sr.sprite = loadedSprite;
+            Instance = null;
         }
     }
 }

@@ -1043,7 +1043,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 557edc1a06b32b141bb6dbdfc3292a37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentCoins: 0
+  currentCoins: 500
 --- !u!1 &235295222
 GameObject:
   m_ObjectHideFlags: 0
@@ -1546,7 +1546,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 690624126}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &417768227
 AudioSource:
@@ -3466,6 +3466,7 @@ GameObject:
   - component: {fileID: 1324932951}
   - component: {fileID: 1324932953}
   - component: {fileID: 1324932952}
+  - component: {fileID: 1324932954}
   m_Layer: 5
   m_Name: panelBirdOriginal
   m_TagString: Untagged
@@ -3533,6 +3534,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1324932950}
   m_CullTransparentMesh: 1
+--- !u!114 &1324932954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1324932950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be8fc14fe92cb154b8c755294d9b3f02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemID: Classic
+  price: 0
+  birdSprite: {fileID: 270593394, guid: 45c81679f2a6bab44a3e556466757db0, type: 3}
+  buttonText: {fileID: 754254872}
+  button: {fileID: 303760726}
 --- !u!1 &1421128844
 GameObject:
   m_ObjectHideFlags: 0
@@ -5378,7 +5396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be8fc14fe92cb154b8c755294d9b3f02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemID: thePoffo
+  itemID: ThePoffo
   price: 100
   birdSprite: {fileID: -3272592022953232413, guid: 0e1a57b711cd06d469ba3a27aa809666, type: 3}
   buttonText: {fileID: 514600181}
@@ -6079,4 +6097,4 @@ SceneRoots:
   - {fileID: 1525947160}
   - {fileID: 1052253681}
   - {fileID: 218727099}
-  - {fileID: 690624126}
+  - {fileID: 417768226}

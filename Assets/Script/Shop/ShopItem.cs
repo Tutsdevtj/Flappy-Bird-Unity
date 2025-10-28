@@ -54,18 +54,16 @@ public class ShopItem : MonoBehaviour
     }
 
     void EquiparItem()
-    {
-        // Salva o item escolhido (mas não tenta mudar sprite aqui)
-        PlayerPrefs.SetString("EquippedItem", itemID);
-        PlayerPrefs.Save();
+{
+    PlayerPrefs.SetString("EquippedItem", itemID);
+    PlayerPrefs.Save();
 
-        isEquipped = true;
+    isEquipped = true;
 
-        // Atualiza a UI da loja
-        ShopManagement.Instance.UpdateAllItemsUI();
+    ShopManagement.Instance.UpdateAllItemsUI();
 
-        Debug.Log($"Skin {itemID} equipada. Será aplicada ao iniciar o jogo.");
-    }
+    Debug.Log($"Skin {itemID} equipada. Será aplicada ao iniciar o jogo.");
+}
 
     public void AtualizarBotao()
     {
