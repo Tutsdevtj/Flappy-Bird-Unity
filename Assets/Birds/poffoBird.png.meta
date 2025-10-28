@@ -184,7 +184,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      poffoBird_0: -3272592022953232413
+      poffoBird_1: 8376311642778327427
+      poffoBird_2: -8973699386745509438
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
