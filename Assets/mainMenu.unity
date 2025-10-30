@@ -829,7 +829,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &157299301
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1558,7 +1558,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 87176df8bb3e55c45b313d5d6c80f1c5, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 87176df8bb3e55c45b313d5d6c80f1c5, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.08
@@ -2485,7 +2485,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -5301214746192765679, guid: 2a5f87bd7c32a3649968e2cfa932f667, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3983,7 +3983,7 @@ GameObject:
   - component: {fileID: 1523023836}
   - component: {fileID: 1523023838}
   m_Layer: 5
-  m_Name: Teste
+  m_Name: CarteiraCoin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4271,7 +4271,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 6246888447345854242, guid: 8501e0f02ec17d44f9f7a165549f4072, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5287,7 +5287,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 5130843918050621596, guid: 034f4f07a1f340544839af4608cc12e6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

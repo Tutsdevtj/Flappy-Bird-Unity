@@ -1,58 +1,49 @@
 using UnityEngine;
 
-// Esta estrutura permite associar um ID (string) a um Sprite no Inspector
 [System.Serializable]
-public struct SkinMapping
+public struct SkinConfiguration 
 {
     public string itemID; // Deve ser EXATAMENTE igual ao itemID no ShopItem
-    public Sprite skinSprite;
+    public AnimatorOverrideController animationOverride; 
 }
 
-[RequireComponent(typeof(SpriteRenderer))]
 public class BirdSkinManager : MonoBehaviour
 {
-    // Arraste seus sprites aqui E configure os IDs
-    public SkinMapping[] possibleSkins; 
+    public SkinConfiguration[] possibleSkins; 
     
-    private SpriteRenderer spriteRenderer;
+    private Animator birdAnimator;
 
     void Awake()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        birdAnimator = GetComponent<Animator>();
         LoadSkin();
     }
 
     void LoadSkin()
     {
-        // 1. Pega o ID salvo pelo ShopItem.cs (Ex: "Classic" ou "ThePoffo")
-        // O valor padrão "Classic" garante que algo seja carregado
         string equippedSkinID = PlayerPrefs.GetString("EquippedItem", "Classic");
 
-        // 2. Encontra o Sprite correspondente a esse ID
-        Sprite spriteToEquip = null;
+        AnimatorOverrideController controllerToEquip = null;
         foreach (var skin in possibleSkins)
         {
             if (skin.itemID == equippedSkinID)
             {
-                spriteToEquip = skin.skinSprite;
-                break; // Para o loop assim que encontrar
+                controllerToEquip = skin.animationOverride;
+                break; 
             }
         }
 
-        // 3. Aplica o Sprite
-        if (spriteToEquip != null)
+        if (controllerToEquip != null)
         {
-            spriteRenderer.sprite = spriteToEquip;
+            birdAnimator.runtimeAnimatorController = controllerToEquip;
         }
         else
         {
-            // Se o ID salvo não for encontrado no array (ex: "Classic" não foi configurado)
             Debug.LogWarning($"Skin ID '{equippedSkinID}' não encontrada em BirdSkinManager!");
             
-            // Tenta usar a primeira skin da lista como fallback
             if (possibleSkins.Length > 0)
             {
-                spriteRenderer.sprite = possibleSkins[0].skinSprite;
+                birdAnimator.runtimeAnimatorController = possibleSkins[0].animationOverride;
             }
         }
     }
