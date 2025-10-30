@@ -35,16 +35,13 @@ public class PlayerFlappyBird : MonoBehaviour
     void Start()
     {
         _rb2D = GetComponent<Rigidbody2D>();
-        _gameHandler = FindFirstObjectByType<GameHandler>(); 
-      
-        _rb2D.isKinematic = true; 
+        _gameHandler = FindFirstObjectByType<GameHandler>();
+        _rb2D.isKinematic = true;
         isGameStarted = false;
-        
         if (getReadyUI != null)
             getReadyUI.SetActive(true);
-
         if (screenFlashImage != null)
-            screenFlashImage.color = new Color(1f, 1f, 1f, 0f); 
+            screenFlashImage.color = new Color(1f, 1f, 1f, 0f);
     }
 
     void Update()

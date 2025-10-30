@@ -1,69 +1,59 @@
 using UnityEngine;
 
+// Esta estrutura permite associar um ID (string) a um Sprite no Inspector
+[System.Serializable]
+public struct SkinMapping
+{
+    public string itemID; // Deve ser EXATAMENTE igual ao itemID no ShopItem
+    public Sprite skinSprite;
+}
+
+[RequireComponent(typeof(SpriteRenderer))]
 public class BirdSkinManager : MonoBehaviour
 {
-    public static BirdSkinManager Instance;
-    private SpriteRenderer sr;
-
-    [Header("Sprites das Skins")]
-    public Sprite classicSprite;
-    public Sprite yellowClassicSprite;
-    public Sprite luizinhoSprite;
-    public Sprite tutuCalvoSprite;
-    public Sprite kaueIndianoSprite;
-    public Sprite thePoffoSprite;
+    // Arraste seus sprites aqui E configure os IDs
+    public SkinMapping[] possibleSkins; 
+    
+    private SpriteRenderer spriteRenderer;
 
     void Awake()
     {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
-
-        Instance = this;
-        sr = GetComponent<SpriteRenderer>();
-
-        // Carrega a skin salva ao iniciar o jogo
-        string equippedID = PlayerPrefs.GetString("EquippedItem", "Classic");
-        ApplySkin(equippedID);
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        LoadSkin();
     }
 
-    public void ApplySkin(string itemID)
+    void LoadSkin()
     {
-        switch (itemID)
+        // 1. Pega o ID salvo pelo ShopItem.cs (Ex: "Classic" ou "ThePoffo")
+        // O valor padrão "Classic" garante que algo seja carregado
+        string equippedSkinID = PlayerPrefs.GetString("EquippedItem", "Classic");
+
+        // 2. Encontra o Sprite correspondente a esse ID
+        Sprite spriteToEquip = null;
+        foreach (var skin in possibleSkins)
         {
-            case "Classic":
-                sr.sprite = classicSprite;
-                break;
-            case "YellowClassic":
-                sr.sprite = yellowClassicSprite;
-                break;
-            case "Luizinho":
-                sr.sprite = luizinhoSprite;
-                break;
-            case "TutuCalvo":
-                sr.sprite = tutuCalvoSprite;
-                break;
-            case "KaueIndiano":
-                sr.sprite = kaueIndianoSprite;
-                break;
-            case "ThePoffo":
-                sr.sprite = thePoffoSprite;
-                break;
-            default:
-                sr.sprite = classicSprite;
-                break;
+            if (skin.itemID == equippedSkinID)
+            {
+                spriteToEquip = skin.skinSprite;
+                break; // Para o loop assim que encontrar
+            }
         }
 
-        Debug.Log($"Skin carregada: {itemID}");
-    }
-
-    void OnDestroy()
-    {
-        if (Instance == this)
+        // 3. Aplica o Sprite
+        if (spriteToEquip != null)
         {
-            Instance = null;
+            spriteRenderer.sprite = spriteToEquip;
+        }
+        else
+        {
+            // Se o ID salvo não for encontrado no array (ex: "Classic" não foi configurado)
+            Debug.LogWarning($"Skin ID '{equippedSkinID}' não encontrada em BirdSkinManager!");
+            
+            // Tenta usar a primeira skin da lista como fallback
+            if (possibleSkins.Length > 0)
+            {
+                spriteRenderer.sprite = possibleSkins[0].skinSprite;
+            }
         }
     }
 }

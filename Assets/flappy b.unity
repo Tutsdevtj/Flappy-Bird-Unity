@@ -1404,12 +1404,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecbb409378c5fdd44af5856ffc7323c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  classicSprite: {fileID: 270593394, guid: 45c81679f2a6bab44a3e556466757db0, type: 3}
-  yellowClassicSprite: {fileID: -329357521, guid: 45c81679f2a6bab44a3e556466757db0, type: 3}
-  luizinhoSprite: {fileID: -2579066860521768018, guid: d7fa5f4b8879b904fa51835fd8c59425, type: 3}
-  tutuCalvoSprite: {fileID: 373386735388233590, guid: 059872fec3251544fafed4d0a976c97c, type: 3}
-  kaueIndianoSprite: {fileID: 4917965444481243981, guid: 0b7e020620bb76540911f7509a948485, type: 3}
-  thePoffoSprite: {fileID: -3272592022953232413, guid: 0e1a57b711cd06d469ba3a27aa809666, type: 3}
+  possibleSkins:
+  - itemID: ThePoffo
+    skinSprite: {fileID: -3272592022953232413, guid: 0e1a57b711cd06d469ba3a27aa809666, type: 3}
+  - itemID: Classic
+    skinSprite: {fileID: 270593394, guid: 45c81679f2a6bab44a3e556466757db0, type: 3}
+  - itemID: TutuCalvo
+    skinSprite: {fileID: 373386735388233590, guid: 059872fec3251544fafed4d0a976c97c, type: 3}
+  - itemID: KaueIndiano
+    skinSprite: {fileID: 4917965444481243981, guid: 0b7e020620bb76540911f7509a948485, type: 3}
+  - itemID: YellowClassic
+    skinSprite: {fileID: -329357521, guid: 45c81679f2a6bab44a3e556466757db0, type: 3}
+  - itemID: Luizinho
+    skinSprite: {fileID: -2579066860521768018, guid: d7fa5f4b8879b904fa51835fd8c59425, type: 3}
 --- !u!1 &1126708368
 GameObject:
   m_ObjectHideFlags: 0

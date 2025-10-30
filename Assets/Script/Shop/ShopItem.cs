@@ -5,7 +5,7 @@ using TMPro;
 public class ShopItem : MonoBehaviour
 {
     [Header("Configurações do item")]
-    public string itemID;           // Ex: "Classic", "ThePoffo", etc.
+    public string itemID;           // "Classic"  "ThePoffo" e os outro
     public int price;
     public Sprite birdSprite;
     public TMP_Text buttonText;
@@ -19,7 +19,7 @@ public class ShopItem : MonoBehaviour
         isOwned = PlayerPrefs.GetInt(itemID + "_Owned", 0) == 1;
         isEquipped = PlayerPrefs.GetString("EquippedItem", "Classic") == itemID;
 
-        // O clássico é sempre possuído
+        // O clássico sempre ta equipado
         if (itemID == "Classic")
         {
             isOwned = true;
