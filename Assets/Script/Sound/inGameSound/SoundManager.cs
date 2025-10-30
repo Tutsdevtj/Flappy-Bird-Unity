@@ -8,7 +8,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip coinColete;
     public AudioClip birdMorte;
     public AudioClip birdWing;
-
+    public AudioClip scoreSound; // <-- renomeado aqui
     void Awake()
     {
         if (instance == null)
@@ -23,19 +23,16 @@ public class SoundManager : MonoBehaviour
 
     public void PlayCoin()
     {
-        audioSource.volume = 0.1f;
+        audioSource.volume = 0.3f;
         audioSource.PlayOneShot(coinColete);
     }
 
-<<<<<<< Updated upstream
-=======
     public void SoundScoreAdd()
     {
         audioSource.volume = 0.2f;
         audioSource.PlayOneShot(scoreSound);
     }
 
->>>>>>> Stashed changes
     public void PlayMorte()
     {
         audioSource.volume = 0.1f;

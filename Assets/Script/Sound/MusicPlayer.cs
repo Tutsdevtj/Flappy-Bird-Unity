@@ -23,7 +23,7 @@ public class MusicPlayer : MonoBehaviour
 
         audioSource = gameObject.AddComponent<AudioSource>();
         audioSource.loop = true;
-        audioSource.volume = 0.4f; // volume da música
+        audioSource.volume = 0.08f; // volume da música
     }
 
     private void Start()
