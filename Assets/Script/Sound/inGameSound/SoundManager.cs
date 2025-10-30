@@ -11,7 +11,6 @@ public class SoundManager : MonoBehaviour
 
     void Awake()
     {
-
         if (instance == null)
         {
             instance = this;
@@ -20,15 +19,23 @@ public class SoundManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-        // DontDestroyOnLoad(gameObject); mantém o som entre cenas
     }
 
     public void PlayCoin()
     {
+        audioSource.volume = 0.1f;
         audioSource.PlayOneShot(coinColete);
     }
 
+<<<<<<< Updated upstream
+=======
+    public void SoundScoreAdd()
+    {
+        audioSource.volume = 0.2f;
+        audioSource.PlayOneShot(scoreSound);
+    }
+
+>>>>>>> Stashed changes
     public void PlayMorte()
     {
         audioSource.volume = 0.1f;
