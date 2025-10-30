@@ -31,6 +31,7 @@ public class MusicPlayer : MonoBehaviour
         if (trilhaSonora != null)
         {
             audioSource.clip = trilhaSonora;
+            audioSource.volume = 0.05f;
             audioSource.Play();
         }
     }

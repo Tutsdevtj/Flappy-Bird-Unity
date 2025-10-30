@@ -8,6 +8,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip coinColete;
     public AudioClip birdMorte;
     public AudioClip birdWing;
+    public AudioClip scoreSound;
 
     void Awake()
     {
@@ -27,6 +28,12 @@ public class SoundManager : MonoBehaviour
     public void PlayCoin()
     {
         audioSource.PlayOneShot(coinColete);
+    }
+
+    public void ScoreAdd()
+    {
+        audioSource.volume = 0.3f;
+        audioSource.PlayOneShot(scoreSound);
     }
 
     public void PlayMorte()

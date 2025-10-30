@@ -8,7 +8,7 @@ public class ScoreAdd : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Points.scoreValue++;
-        SoundManager.instance.PlayCoin();
+        SoundManager.instance.scoreSound();
     }
     
 }
