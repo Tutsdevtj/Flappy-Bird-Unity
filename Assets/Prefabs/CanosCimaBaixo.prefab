@@ -229,7 +229,7 @@ GameObject:
   - component: {fileID: 517915596175618630}
   - component: {fileID: 1608223559609974972}
   - component: {fileID: 201327822141123595}
-  - component: {fileID: 4054392293564086537}
+  - component: {fileID: 8799906005702739106}
   m_Layer: 0
   m_Name: CanoDeCima
   m_TagString: Untagged
@@ -329,7 +329,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!61 &4054392293564086537
+--- !u!61 &8799906005702739106
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -386,7 +386,7 @@ GameObject:
   - component: {fileID: 7316609329437946368}
   - component: {fileID: 2473578979150251648}
   - component: {fileID: 8301917941271863093}
-  - component: {fileID: 6335424650953779648}
+  - component: {fileID: 5038271765106435590}
   m_Layer: 0
   m_Name: CanoDeBaixo
   m_TagString: Untagged
@@ -486,7 +486,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!61 &6335424650953779648
+--- !u!61 &5038271765106435590
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -8,10 +8,9 @@ public class SoundManager : MonoBehaviour
     public AudioClip coinColete;
     public AudioClip birdMorte;
     public AudioClip birdWing;
-
+    public AudioClip scoreSound; // <-- renomeado aqui
     void Awake()
     {
-
         if (instance == null)
         {
             instance = this;
@@ -20,13 +19,18 @@ public class SoundManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-        // DontDestroyOnLoad(gameObject); mantém o som entre cenas
     }
 
     public void PlayCoin()
     {
+        audioSource.volume = 0.3f;
         audioSource.PlayOneShot(coinColete);
+    }
+
+    public void SoundScoreAdd()
+    {
+        audioSource.volume = 0.2f;
+        audioSource.PlayOneShot(scoreSound);
     }
 
     public void PlayMorte()
